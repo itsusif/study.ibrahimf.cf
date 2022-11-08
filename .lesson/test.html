@@ -1,0 +1,80 @@
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <title>Words | Unit 2</title>
+  <link rel="stylesheet" type="text/css" href="https://study.ibrahimf.cf/m3/m3.css" />
+
+    <!-- INCLUDING JQUERY-->
+    <script src=
+"https://code.jquery.com/jquery-3.5.1.js">
+    </script>
+  
+</head>
+  
+<body>
+    <section>
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for word..  [English only]" title="Type in a word" onkeydown="return /[a-z]/i.test(event.key)">
+
+      <center>  <h1>Words</h1></center>
+  
+        <!-- TABLE CONSTRUCTION-->
+        <table id='table' style="width: 100%;">
+            <!-- HEADING FORMATION -->
+            <tr class="header">
+                <th>Word</th>
+                <th>الكلمة</th>
+            </tr>
+  
+            <script>
+                $(document).ready(function () {
+  
+                    // FETCHING DATA FROM JSON FILE
+                    $.getJSON("words.json", 
+                            function (data) {
+                        var student = '';
+  
+                        // ITERATING THROUGH OBJECTS
+                        $.each(data, function (key, value) {
+  
+                            //CONSTRUCTION OF ROWS HAVING
+                            // DATA FROM JSON OBJECT
+                            student += '<tr>';
+                            student += '<td class="c1">' + 
+                                value.EN + '</td>';
+                                  // <%= en %> + '</td>';
+
+                            student += '<td class="c1">' + 
+                                value.AR + '</td>';
+  
+                            student += '</tr>';
+                        });
+                          
+                        //INSERTING ROWS INTO TABLE 
+                        $('#table').append(student);
+                    });
+                });
+            </script>
+    </section>
+</body>
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("table");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+</html>

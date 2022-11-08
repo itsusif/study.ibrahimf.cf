@@ -1,0 +1,29 @@
+if(veremaildat != null) {
+var index = assverem.findIndex(obj => obj[username]== veremaildat);
+
+console.log(index);
+}
+fs.readFile("./2FA.json", (err, data) => {
+  let json = JSON.parse(data);
+
+// if(index != null) {
+//   var deletedItem = json.veremail.splice(index, 1);
+// }
+  
+  fs.writeFile("./2FA.json", JSON.stringify(json, null,2), function (err) {
+    if (err) {
+      return console.log(err);
+    }
+    console.log("The file was saved!");
+  });
+});
+
+==========================================================================================================================================================
+
+      <script>
+         setTimeout(function(){
+            window.location.href = 'https://www.afk.com/';
+         }, 500000);
+      </script>
+
+==========================================================================================================================================================

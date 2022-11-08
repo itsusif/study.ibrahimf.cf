@@ -1,0 +1,55 @@
+<style>
+.chat-hover:before{
+  content: attr(data-headerbetachat);
+  visibility: hidden;
+  opacity: 0;
+  width: 140px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+.chat-hover:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+</style>
+
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="https://study.ibrahimf.cf/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://study.ibrahimf.cf/account">Account</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            M3
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://study.ibrahimf.cf/m3/unit1/words">Words | Unit 1</a></li>
+            <li><a class="dropdown-item" href="https://study.ibrahimf.cf/m3/unit1/quiz/words">Quiz Words | Unit 1</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Soon..</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link chat-hover" href="https://study.ibrahimf.cf/chat" data-headerbetachat="Beta">Chat</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

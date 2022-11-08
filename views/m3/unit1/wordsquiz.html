@@ -1,0 +1,545 @@
+<html lang="en">
+<head>
+  <link rel="icon" href="https://cdn.ibrahimf.cf/images/887ca8ba93cd4370862629eb13b7c260.png" type="image/x-icon">
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" type="text/css" href="https://study.ibrahimf.cf/m3/m3.css" />
+<title>M3 | Quiz Words unit 1 - <%= username %></title>
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- <style>table, th, td {border:1px solid black;padding: 10px;}td{font-size: 17px;text-align: center;width: 100px;font-weight: 900px;}.popup{font-size: 10px;color: blue;}td .num {color: red;padding: 0 10px 0 0;}input{text-decoration: none;}.c1{background: #f6f4ef;}#header {background-color: #f1f1f1;padding: 7px 5px;color: black;text-decoration: none;text-align: center;font-size: 20px; font-weight: bold;position: fixed;top: 0;width: 100% ;transition: 0.2s;}#header a{color: black;text-decoration: none;}.header {background-color: #f1f1f1;padding: 7px 5px;color: black;text-decoration: none;text-align: center;font-size: 20px;font-weight: bold;position: fixed;top: 0;width: 100% ;transition: 0.2s;}.header a{color: black;text-decoration: none;}.sidebar {height: 100%;width: 0;position: fixed;z-index: 1;top: 0;left: 0;background-color: #111;overflow-x: hidden;transition: 0.5s;padding-top: 60px;}.sidebar a {padding: 8px 8px 8px 32px;text-decoration: none;font-size: 25px;color: #818181;display: block;transition: 0.3s;}.sidebar .back {padding: 8px 8px 8px 32px;text-decoration: none;font-size: 25px;color: #818181;display: block;transition: 0.3s;background-color: #111;border: 0px solid;}.sidebar a:hover {color: #f1f1f1;}.sidebar .back:hover {border: 0px solid;color: #f1f1f1;}.sidebar .closebtn {position: absolute;top: 0;right: 25px;font-size: 36px;margin-left: 50px;}.openbtn {font-size: 20px;cursor: pointer;background-color: #111;color: white;padding: 10px 15px;border: none;}.openbtn:hover {background-color: #444;}#main {transition: margin-left .5s;padding: 20px;}@media screen and (max-height: 450px) {.sidebar {padding-top: 15px;}.sidebar a {font-size: 18px;}}</style> -->
+<script>
+  const fadeOut = () => {
+    const loading = document.querySelector(".loading");
+    loading.classList.add("loadingb");
+}
+
+window.addEventListener("load", fadeOut);
+</script>
+</head>
+<body>
+<div class="loading">
+ <div class="spinner"></div>
+</div>
+<%- include('../../shortcuts/header.ejs')%>
+  <center>
+      <table style="width: 100%;" id="myTable">
+            <tr>
+                <th>Word</th>
+                <th>الكلمة</th>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an1" placeholder="منتزة الاحياء المائية" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo1" style="display: none;">aquarium</a><button id="bt1">Submit</button></td>
+                <td class="c1">منتزة الاحياء المائية</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an2" placeholder="حديقة نباتية" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo2" style="display: none;">botanical garden</a><button id="bt2">Submit</button></td>
+                <td class="c2">حديقة نباتية</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an3" placeholder="مركز رياضي" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo3" style="display: none;">sports centre</a><button id="bt3">Submit</button></td>
+                <td class="c1">مركز رياضي</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an4" placeholder="بحيرة" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo4" style="display: none;">lake</a><button id="bt4">Submit</button></td>
+                <td class="c2">بحيرة</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an5" placeholder="آثار" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo5" style="display: none;">monuments</a><button id="bt5">Submit</button></td>
+                <td class="c1">آثار</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an6" placeholder="هادئ/مسالم" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo6" style="display: none;">peaceful</a><button id="bt6">Submit</button></td>
+                <td class="c2">هادئ/مسالم</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an7" placeholder="حركة المرور" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo7" style="display: none;">traffic</a><button id="bt7">Submit</button></td>
+                <td class="c1">حركة المرور</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an8" placeholder="خاصة/خصوصاً" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo8" style="display: none;">especially</a><button id="bt8">Submit</button></td>
+                <td class="c2">خاصة/خصوصاً</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an9" placeholder="ركن" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo9" style="display: none;">corner</a><button id="bt9">Submit</button></td>
+                <td class="c1">ركن</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an10" placeholder="محطة" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo10" style="display: none;">station</a><button id="bt10">Submit</button></td>
+                <td class="c2">محطة</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an11" placeholder="اتجهات" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo11" style="display: none;">directions</a><button id="bt11">Submit</button></td>
+                <td class="c1">اتجهات</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an12" placeholder="يستعير" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo12" style="display: none;">borrow</a><button id="bt12">Submit</button></td>
+                <td class="c2">يستعير</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an13" placeholder="بقايا/أطلال" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo13" style="display: none;">ruins</a><button id="bt13">Submit</button></td>
+                <td class="c1">بقايا/أطلال</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an14" placeholder="تلوث" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo14" style="display: none;">pollution</a><button id="bt14">Submit</button></td>
+                <td class="c2">تلوث</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an15" placeholder="محمية طبيعية" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo15" style="display: none;">nature reserve</a><button id="bt15">Submit</button></td>
+                <td class="c1">محمية طبيعية</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an16" placeholder="منطقة/مساحة" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo16" style="display: none;">area</a><button id="bt16">Submit</button></td>
+                <td class="c2">منطقة/مساحة</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an17" placeholder="ابو الهول" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo17" style="display: none;">sphinx</a><button id="bt17">Submit</button></td>
+                <td class="c1">ابو الهول</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an18" placeholder="يشمل" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo18" style="display: none;">include</a><button id="bt18">Submit</button></td>
+                <td class="c2">يشمل</td>
+            </tr>
+            <tr>
+                <td class="c1">
+                    <input id="an19" placeholder="طبيعي" type="text" onblur="this.value=removeSpaces(this.value);" /><button id="bt19">Submit</button><a id="wo19" style="display: none;">nature<a class="popup">(1)</a></a>
+                    <a style="color: red;">X</a><input id="an20" placeholder="غير طبيعي" type="text" onblur="this.value=removeSpaces(this.value);" /><button id="bt20">Submit</button>
+                    <a id="wo20" style="display: none;">unnatural<a class="popup">(2)</a></a>
+                </td>
+                <td class="c1">
+                    طبيعي<a class="popup">(1)</a> <a style="color: red;">X</a><br />
+                    غير طبيعي<a class="popup">(2)</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an21" placeholder="حدث هام" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo21" style="display: none;">event</a><button id="bt21">Submit</button></td>
+                <td class="c2">حدث هام</td>
+            </tr>
+            <tr>
+                <td class="c1">
+                    <input id="an22" placeholder="مفيد" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo22" style="display: none;">useful</a><button id="bt22">Submit</button><a class="popup">(1)</a>
+                    <a style="color: red;">X</a> <input id="an23" placeholder="غير مفيد" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo23" style="display: none;">useless</a><button id="bt23">Submit</button>
+                    <a class="popup">(2)</a>
+                </td>
+                <td class="c1">
+                    مفيد<a class="popup">(1)</a> <a style="color: red;">X</a><br />
+                    غير مفيد<a class="popup">(2)</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an24" placeholder="قناة السويس" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo24" style="display: none;">the suez canal</a><button id="bt24">Submit</button></td>
+                <td class="c2">قناة السويس</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an25" placeholder="يتخذ الطريق الثاني" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo25" style="display: none;">take the second road</a><button id="bt25">Submit</button></td>
+                <td class="c1">يتخذ الطريق الثاني</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an26" placeholder="على البحيرة" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo26" style="display: none;">on the lake</a><button id="bt26">Submit</button></td>
+                <td class="c2">على البحيرة</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an27" placeholder="يشبه" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo27" style="display: none;">look like</a><button id="bt27">Submit</button></td>
+                <td class="c1">يشبه</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an28" placeholder="يوجد شواطئ حولها" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo28" style="display: none;">with beaches around it</a><button id="bt28">Submit</button></td>
+                <td class="c2">يوجد شواطئ حولها</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an29" placeholder="أكثر من المعتاد" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo29" style="display: none;">more than usual</a><button id="bt29">Submit</button></td>
+                <td class="c1">أكثر من المعتاد</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an30" placeholder="على الخريطة" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo30" style="display: none;">on map</a><button id="bt30">Submit</button></td>
+                <td class="c2">على الخريطة</td>
+            </tr>
+            <tr>
+                <td class="c1">
+                    <input id="an31" placeholder="جذاب" type="text" onblur="this.value=removeSpaces(this.value);" /><button id="bt31">Submit</button><a id="wo31" style="display: none;">attractive<a class="popup">(1)</a></a>
+                    <a style="color: red;">X</a> <input id="an32" placeholder="قبيح" type="text" onblur="this.value=removeSpaces(this.value);" /><button id="bt32">Submit</button>
+                    <a id="wo32" style="display: none;">ugly<a class="popup">(2)</a></a>
+                </td>
+                <td class="c1">
+                    جذاب<a class="popup">(1)</a> <a style="color: red;">X</a><br />
+                    قبيح <a class="popup">(2)</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="c2">
+                    <input id="an33" placeholder="حديث" type="text" onblur="this.value=removeSpaces(this.value);" /><button id="bt33">Submit</button><a id="wo33" style="display: none;">modern<a class="popup">(1)</a></a>
+                    <a style="color: red;">X</a> <input id="an34" placeholder="قديم" type="text" onblur="this.value=removeSpaces(this.value);" /><button id="bt34">Submit</button>
+                    <a id="wo34" style="display: none;">ancient<a class="popup">(2)</a></a>
+                </td>
+                <td class="c2">
+                    حديث<a class="popup">(1)</a> <a style="color: red;">X</a><br />
+                    قديم <a class="popup">(2)</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="c1">
+                    <input id="an35" placeholder="هادئ/مسالم" type="text" onblur="this.value=removeSpaces(this.value);" /><button id="bt35">Submit</button><a id="wo35" style="display: none;">peaceful<a class="popup">(1)</a></a>
+                    <a style="color: red;">X</a><input id="an36" placeholder="مزعج" type="text" onblur="this.value=removeSpaces(this.value);" /><button id="bt36">Submit</button><a id="wo36" style="display: none;">noisy<a class="popup">(2)</a></a>
+                </td>
+                <td class="c1">
+                    هادئ/مسالم<a class="popup">(1)</a> <a style="color: red;">X</a><br />
+                    مزعج <a class="popup">(2)</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="c2">
+                    <input id="an37" placeholder="يستعير" type="text" onblur="this.value=removeSpaces(this.value);" /><button id="bt37">Submit</button><a id="wo37" style="display: none;">borrow<a class="popup">(1)</a></a>
+                    <a style="color: red;">X</a><input id="an38" placeholder="يقرض" type="text" onblur="this.value=removeSpaces(this.value);" /><button id="bt38">Submit</button>
+                    <a id="wo38" style="display: none;">lend<a class="popup">(2)</a></a>
+                </td>
+                <td class="c2">يستعير<a class="popup">(1)</a> <a style="color: red;">X</a> يقرض <a class="popup">(2)</a></td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an39" placeholder="معرض/يعرض" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo39" style="display: none;">exhibition</a><button id="bt39">Submit</button></td>
+                <td class="c1">معرض/يعرض</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an40" placeholder="فضاء" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo40" style="display: none;">space</a><button id="bt40">Submit</button></td>
+                <td class="c2">فضاء</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an41" placeholder="معدية" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo41" style="display: none;">ferry</a><button id="bt41">Submit</button></td>
+                <td class="c1">معدية</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an42" placeholder="وادي" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo42" style="display: none;">vally</a><button id="bt42">Submit</button></td>
+                <td class="c2">وادي</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an43" placeholder="ركاب" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo43" style="display: none;">passenger</a><button id="bt43">Submit</button></td>
+                <td class="c1">ركاب</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an44" placeholder="أسفل" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo44" style="display: none;">below</a><button id="bt44">Submit</button></td>
+                <td class="c2">أسفل</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an45" placeholder="رصيف محطة القطار" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo45" style="display: none;">platform</a><button id="bt45">Submit</button></td>
+                <td class="c1">رصيف محطة القطار</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an46" placeholder="لوحات/رسومات" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo46" style="display: none;">paintings</a><button id="bt46">Submit</button></td>
+                <td class="c2">لوحات/رسومات</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an47" placeholder="أشياء/مقتنيات" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo47" style="display: none;">objects</a><button id="bt47">Submit</button></td>
+                <td class="c1">أشياء/مقتنيات</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an48" placeholder="جدول مواعيد" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo48" style="display: none;">timetable</a><button id="bt48">Submit</button></td>
+                <td class="c2">جدول مواعيد</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an49" placeholder="كلمات متقاطعة" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo49" style="display: none;">cross words</a><button id="bt49">Submit</button></td>
+                <td class="c1">كلمات متقاطعة</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an50" placeholder="طابق" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo50" style="display: none;">floor</a><button id="bt50">Submit</button></td>
+                <td class="c2">طابق</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an51" placeholder="كهربي" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo51" style="display: none;">electric</a><button id="bt51">Submit</button></td>
+                <td class="c1">كهربي</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an52" placeholder="محطة الاتوبيس" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo52" style="display: none;">stop</a><button id="bt52">Submit</button></td>
+                <td class="c2">محطة الاتوبيس</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an53" placeholder="أعمال هندسية" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo53" style="display: none;">engineering works</a><button id="bt53">Submit</button></td>
+                <td class="c1">أعمال هندسية</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an54" placeholder="حارس" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo54" style="display: none;">guard</a><button id="bt54">Submit</button></td>
+                <td class="c2">حارس</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an55" placeholder="جامعة" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo55" style="display: none;">univercity</a><button id="bt55">Submit</button></td>
+                <td class="c1">جامعة</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an56" placeholder="أنواع" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo56" style="display: none;">types</a><button id="bt56">Submit</button></td>
+                <td class="c2">أنواع</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an57" placeholder="نقل/مواصلات" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo57" style="display: none;">transport</a><button id="bt57">Submit</button></td>
+                <td class="c1">نقل/مواصلات</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an58" placeholder="يعبر" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo58" style="display: none;">cross</a><button id="bt58">Submit</button></td>
+                <td class="c2">يعبر</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an59" placeholder="خط سكة حديد" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo59" style="display: none;">railway</a><button id="bt59">Submit</button></td>
+                <td class="c1">خط سكة حديد</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an60" placeholder="طاقة" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo60" style="display: none;">energy</a><button id="bt60">Submit</button></td>
+                <td class="c2">طاقة</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an61" placeholder="بيئة" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo61" style="display: none;">environment</a><button id="bt61">Submit</button></td>
+                <td class="c1">بيئة</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an62" placeholder="يفضل" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo62" style="display: none;">prefer</a><button id="bt62">Submit</button></td>
+                <td class="c2">يفضل</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an63" placeholder="قضائب سكة الحديدية" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo63" style="display: none;">rails</a><button id="bt63">Submit</button></td>
+                <td class="c1">قضائب سكة الحديدية</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an64" placeholder="مركزي" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo64" style="display: none;">central</a><button id="bt64">Submit</button></td>
+                <td class="c2">مركزي</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an65" placeholder="يلحق | يصطاد" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo65" style="display: none;">catch</a><button id="bt65">Submit</button> 🢂 <input id="an98" placeholder="التحق | اصطاد" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo98" style="display: none;">caught</a><button id="bt98">Submit</button> 🢂 <input id="an99" placeholder="التحق | اصطاد" type="text" onblur="this.value=removeSpaces(this.value);" /><a id="wo99" style="display: none;">caught</a><button id="bt99">Submit</button></td>
+                <td class="c1">التحق | اصطاد 🢂 التحق | اصطاد 🢂 يلحق | يصطاد</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an66" placeholder="تبين" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo66" style="display: none;">show | showed | shown</a><button id="bt66">Submit</button></td>
+                <td class="c2">تبين</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an67" placeholder="يغادر" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo67" style="display: none;">leave | left</a><button id="bt67">Submit</button></td>
+                <td class="c1">يغادر</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an68" placeholder="يتبع الاتجهات" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo68" style="display: none;">Follow directions</a><button id="bt68">Submit</button></td>
+                <td class="c2">يتبع الاتجهات</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an69" placeholder="يتبع القواعد" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo69" style="display: none;">Follow the rules</a><button id="bt69">Submit</button></td>
+                <td class="c1">يتبع القواعد</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an70" placeholder="يستقل القطار" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo70" style="display: none;">get a train</a><button id="bt70">Submit</button></td>
+                <td class="c2">يستقل القطار</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an71" placeholder="يصعد الطابق الاعلى" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo71" style="display: none;">go upstairs</a><button id="bt71">Submit</button></td>
+                <td class="c1">يصعد الطابق الاعلى</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an72" placeholder="ينظر خلال النافذه" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo72" style="display: none;">look out of the window</a><button id="bt72">Submit</button></td>
+                <td class="c2">ينظر خلال النافذه</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an73" placeholder="مدينة مزدحمه" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo73" style="display: none;">busy cities</a><button id="bt73">Submit</button></td>
+                <td class="c1">مدينة مزدحمه</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an74" placeholder="يتجول" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo74" style="display: none;">travel around</a><button id="bt74">Submit</button></td>
+                <td class="c2">يتجول</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an75" placeholder="ما الذي يميز" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo75" style="display: none;">what's special about ... ?</a><button id="bt75">Submit</button></td>
+                <td class="c1">ما الذي يميز</td>
+            </tr>
+            <tr>
+               <td class="c2"><input id="an76" placeholder="عادي" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo76" style="display: none;">usual</a><button id="bt76">Submit</button><a class="popup">(1)</a> <a style="color: red;">X</a> <input id="an77" placeholder="غير عادي" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo77" style="display: none;">unusual</a><button id="bt77">Submit</button><a class="popup">(2)</a></td>
+                <td class="c2">عادي<a class="popup">(1)</a> <a style="color: red;">X</a> غير عادي <a class="popup">(2)</a></td>
+            </tr>
+            <tr>
+                <td class="c1"> <input id="an78" placeholder="مجوهرات" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo78" style="display: none;">jewellery</a><button id="bt78">Submit</button></td>
+                <td class="c1">مجوهرات</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an79" placeholder="أواني فخارية" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo79" style="display: none;">pottery</a><button id="bt79">Submit</button></td>
+                <td class="c2">أواني فخارية</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an80" placeholder="قريه" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo80" style="display: none;">century</a><button id="bt80">Submit</button></td>
+                <td class="c1">قريه</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an81" placeholder="اقتراح" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo81" style="display: none;">suggestion</a><button id="bt81">Submit</button></td>
+                <td class="c1">اقتراح</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an82" placeholder="يرد | يستجيب" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo82" style="display: none;">respond</a><button id="bt82">Submit</button></td>
+                <td class="c2">يرد | يستجيب</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an83" placeholder="داخل المنزل" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo83" style="display: none;">indoors</a><button id="bt83">Submit</button></td>
+                <td class="c1">داخل المنزل</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an84" placeholder="خارج المنزل" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo84" style="display: none;">outdoors</a><button id="bt84">Submit</button></td>
+                <td class="c1">خارج المنزل</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an85" placeholder="يرفض" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo85" style="display: none;">disagree</a><button id="bt85">Submit</button></td>
+                <td class="c2">يرفض</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an86" placeholder="بأدب" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo86" style="display: none;">politely</a><button id="bt86">Submit</button></td>
+                <td class="c1">بأدب</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an87" placeholder="يرتب" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo87" style="display: none;">arrange</a><button id="bt87">Submit</button></td>
+                <td class="c2">يرتب</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an88" placeholder="يوصف" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo88" style="display: none;">describe</a><button id="bt88">Submit</button></td>
+                <td class="c1">يوصف</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an89" placeholder="رأي" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo89" style="display: none;">opinion</a><button id="bt89">Submit</button></td>
+                <td class="c2">رأي</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an90" placeholder="مشاعر" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo90" style="display: none;">feelings</a><button id="bt90">Submit</button></td>
+                <td class="c1">مشاعر</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an91" placeholder="نهائي" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo91" style="display: none;">final</a><button id="bt91">Submit</button></td>
+                <td class="c2">نهائي</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an92" placeholder="قرار" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo92" style="display: none;">decision</a><button id="bt92">Submit</button></td>
+                <td class="c1">قرار</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an93" placeholder="بري" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo93" style="display: none;">wild</a><button id="bt93">Submit</button></td>
+                <td class="c2">بري</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an94" placeholder="مقال نقدي" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo94" style="display: none;">review</a><button id="bt94">Submit</button></td>
+                <td class="c1">مقال نقدي</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an95" placeholder="خديوي" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo95" style="display: none;">khedive</a><button id="bt95">Submit</button></td>
+                <td class="c2">خديوي</td>
+            </tr>
+            <tr>
+                <td class="c1"><input id="an96" placeholder="دعوه" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo96" style="display: none;">invitation</a><button id="bt96">Submit</button></td>
+                <td class="c1">دعوه</td>
+            </tr>
+            <tr>
+                <td class="c2"><input id="an97" placeholder="قريب من" type="text" onblur="this.value=removeSpaces(this.value);"/><a id="wo97" style="display: none;">nearby</a><button id="bt97">Submit</button></td>
+                <td class="c2">قريب من</td>
+            </tr>
+            <tr>
+                <td class="c1">invite</td>
+                <td class="c1">يدعو</td>
+            </tr>
+            <tr>
+                <td class="c2">gardner</td>
+                <td class="c2">بستاني</td>
+            </tr>
+            <tr>
+                <td class="c1">meet-up</td>
+                <td class="c1">يتقابل</td>
+            </tr>
+            <tr>
+                <td class="c2">bring | brought</td>
+                <td class="c2">احضر</td>
+            </tr>
+            <tr>
+                <td class="c1">wear | wore | worn</td>
+                <td class="c1">يرتدي</td>
+            </tr>
+            <tr>
+                <td class="c2">agree on an activity</td>
+                <td class="c2">توافق على قيام نشاط</td>
+            </tr>
+            <tr>
+                <td class="c1">for lunch</td>
+                <td class="c1">للغذاء</td>
+            </tr>
+            <tr>
+                <td class="c2">go on a ferry</td>
+                <td class="c2">الذهاب في معدية</td>
+            </tr>
+            <tr>
+              <td class="c1">polietly<a class="popup">(1)</a> <a style="color: red;">X</a> impolietly<a class="popup">(2)</a></td>
+                <td class="c1">بادب<a class="popup">(1)</a> <a style="color: red;">X</a> بطريقة غير مهذبه <a class="popup">(2)</a></td>
+            </tr> 
+            <tr>
+                <td class="c2">northern</td>
+                <td class="c2">شمالي</td>
+            </tr>
+            <tr>
+                <td class="c1">southern</td>
+                <td class="c1">جنوبي</td>
+            </tr>
+            <tr>
+                <td class="c2">eastern</td>
+                <td class="c2">شرقي</td>
+            </tr>
+            <tr>
+                <td class="c1">western</td>
+                <td class="c1">غربي</td>
+            </tr>
+            <tr>
+                <td class="c2">look forword to</td>
+                <td class="c2">يتطلع شوقا الى</td>
+            </tr>
+            <tr>
+              <td class="c1">below<a class="popup">(1)</a> <a style="color: red;">X</a> above<a class="popup">(2)</a></td>
+                <td class="c1">أسفل<a class="popup">(1)</a> <a style="color: red;">X</a> أعلى <a class="popup">(2)</a></td>
+            </tr> 
+            <tr>
+              <td class="c2">close | closest || near | nearest<a class="popup">(1)</a> <a style="color: red;">X</a> forthest<a class="popup">(2)</a></td>
+                <td class="c2">أقرب<a class="popup">(1)</a> <a style="color: red;">X</a> أبعد <a class="popup">(2)</a></td>
+            </tr> 
+            <tr>
+                <td class="c1">have tennis lessons</td>
+                <td class="c1">لديه حصص \ دروس في التنس</td>
+            </tr>
+            <tr>
+                <td class="c2">find some facts about</td>
+                <td class="c2">تجد بعض الحقائق عن</td>
+            </tr>
+        </table>
+    </center>
+  <script src="https://study.ibrahimf.cf/m3/unit1/m3.js"></script>
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+<script>
+const check=document.getElementById("check")
+if (localStorage.getItem('darkMode')===null){
+    localStorage.setItem('darkMode', "false");
+}
+const link = document.createElement('link');
+link.rel = 'stylesheet';
+document.getElementsByTagName('HEAD')[0].appendChild(link); 
+checkStatus()
+function checkStatus(){
+    if (localStorage.getItem('darkMode')==="true"){
+        check.checked = true;                           
+        link.href = '/dark.css';                   
+    }else{
+        check.checked = false;                          
+        link.href = '';
+    }
+}
+function changeStatus(){                                
+    if (localStorage.getItem('darkMode')==="true"){     
+        localStorage.setItem('darkMode', "false");      
+        link.href = '';
+    } else{
+        localStorage.setItem('darkMode', "true");       
+        link.href = '/dark.css';
+    }
+}
+</script>
+</body>
+</html>

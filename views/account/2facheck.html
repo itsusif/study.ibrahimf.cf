@@ -1,0 +1,44 @@
+<html>
+<head>
+<link rel="icon" href="https://cdn.ibrahimf.cf/images/887ca8ba93cd4370862629eb13b7c260.png" type="image/x-icon">
+  <!-- JavaScript Bundle with Popper -->
+  <title>2FA CHECK !</title>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script>
+  const fadeOut = () => {
+    const loading = document.querySelector(".loading");
+    loading.classList.add("loadingb");
+}
+
+window.addEventListener("load", fadeOut);
+</script>
+<style>.loading{background: #222;color: #FFF;position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 999;transition: opacity 1s, visibility 1s}.loading .spinner{width: 80px;height: 80px;position: relative;top: 50%;left: 50%;transform: translate(-50%, -50%)}.loading .spinner::after{content: '';display: block;border-radius: 50%;width: 0;height: 0;margin: 8px;border: 32px solid;border-color: #FFF transparent #FFF;animation: lds-hourglass 1.2s infinite}.loadingb{opacity: 0;visibility: hidden}@keyframes lds-hourglass{0%{transform: rotate(0);animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)}50%{transform: rotate(900deg);animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)}100%{transform: rotate(1800deg)}}</style>
+</head>
+<body>
+<div class="loading">
+ <div class="spinner"></div>
+</div>
+<%- include('../shortcuts/header.ejs')%>
+<center>
+   <h1>Code Send In Email</h1> <br>
+<div class="input-group mb-3 position-absolute top-50 start-50 translate-middle">
+    <form action="/emailcheck" method="post" class="form-floating">
+    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Auth Code || Example [ <%= randomnum %> ]" name="butauth" required>
+    <label for="floatingInputGroup1">Auth Code || Example [ <%= randomnum %> ]</label>
+    <input type="submit" value="Submit" class="btn btn-outline-secondary" style="height: 60;width: 300;">
+    </form>
+    <form action="/resendagain" method="post">
+    <input type="submit" value="Resend Code Again" class="btn btn-outline-secondary" style="height: 60;">
+    </form>
+    <form action="/editemail" method="post">
+    <input type="submit" value="Edit Email" class="btn btn-danger" style="height: 60;">
+    </form>
+  </div>
+</div>
+
+
+
+</body>
+</html>

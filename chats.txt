@@ -1,0 +1,17 @@
+<span class="name" style="color:black">Admin</span><span> This Page in Beta version | هذه الصفحة بالنسخة التجربية</span>
+1
+
+<span class="name" style="color:#35CC73">admin</span><span class="green"> joined.</span>
+1667697396456
+
+<span class="name" style="color:#35CC73">admin</span>: <span class="message-content">:-)</span>
+1667697427850
+
+<span class="name" style="color:#35CC73">admin</span> <span class="red"> left.</span>
+1667697433434
+
+<span class="name" style="color:#6B4B24">admin</span><span class="green"> joined.</span>
+1667697434338
+
+<span class="name" style="color:#6B4B24">admin</span> <span class="red"> left.</span>
+1667697450619

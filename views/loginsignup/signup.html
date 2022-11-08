@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup Page</title>
+  <link rel="icon" href="https://cdn.ibrahimf.cf/images/887ca8ba93cd4370862629eb13b7c260.png" type="image/x-icon">
+<!-- <meta http-equiv="refresh" content="1; URL=https://study.ibrahimf.cf/login"/> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+#preloder {background:black url(/loder.gif) no-repeat center center;background-size:15%;height:100vh;width:100%;position:fixed;z-index:100;}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input:invalid {
+    background-color: ivory;
+    border: none;
+    outline: 2px solid red;
+    border-radius: 5px;
+}
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.but{
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.but:hover {
+  opacity: 0.8;
+}
+  
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+      appearance: auto;
+
+    text-align: center;
+    color:black;
+
+    border-width: 2px;
+
+    text-decoration: none;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 40%;
+  }
+}
+/* Start Loading */
+.loading {
+    background: #222;
+    color: #FFF;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    transition: opacity 1s, visibility 1s;
+}
+
+.loading .spinner {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading .spinner::after {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    border: 32px solid;
+    border-color: #FFF transparent #FFF;
+    animation: lds-hourglass 1.2s infinite;
+}
+
+.fade {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes lds-hourglass {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+        transform: rotate(1800deg);
+    }
+}
+/* End Loader */
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+#conmes {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+#conmes p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+</style>
+
+<script>
+  const fadeOut = () => {
+    const loading = document.querySelector(".loading");
+    loading.classList.add("fade");
+}
+
+window.addEventListener("load", fadeOut);
+</script>
+</head>
+<body>
+<div class="loading">
+ <div class="spinner"></div>
+</div>
+<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+<input type="hidden"name="action" value="validate_captcha">
+  
+<h2>Signup Form</h2>
+
+<form action="/createaccount" method="post">
+  <div class="imgcontainer">
+    <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="newusername" class="nospaces" onblur="this.value=removeSpaces(this.value);" required>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="newpassword" class="nospaces1" onblur="this.value=removeSpaces(this.value);" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="psw" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+    <input type="password" placeholder="Confirm Password" class="nospaces2" onblur="this.value=removeSpaces(this.value);" id="psw2" required>
+    <input type="checkbox" onclick="myFunction()">Show Password
+
+      <div id="message">
+  <h3>Password must contain the following:</h3>
+  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+  <p id="number" class="invalid">A <b>number</b></p>
+  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+
+</div>
+<div id="conmes">
+<h3>Confirm Password :</h3>
+<p id="confirm" class="invalid"><b>Confirm Password</b></p>      
+
+</div>
+    <input type="submit" value="Sign Up" class="but">
+  </div>
+  <div class="container" style="background-color:#f1f1f1">
+   <input type="button" value="Back" onclick="history.back()" class="cancelbtn">
+    <a href="https://study.ibrahimf.cf/login" class="cancelbtn">Login ?</a>
+
+
+  </div>
+</form>
+</body>
+  <script>
+function myFunction() {
+  var x = document.getElementById("psw");
+  var xx = document.getElementById("psw2");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+  if (xx.type === "password") {
+    xx.type = "text";
+  } else {
+    xx.type = "password";
+  }
+}
+</script>
+  <script>
+var myInput = document.getElementById("psw");
+var myInput2 = document.getElementById("psw2");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+var confirm = document.getElementById("confirm");
+var conmes = document.getElementById("conmes");
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+    
+myInput2.onfocus = function() {
+  document.getElementById("conmes").style.display = "block";
+}
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+    
+myInput2.onblur = function() {
+  document.getElementById("conmes").style.display = "none";
+}
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+
+  if(myInput2.value != myInput.value) {
+    myInput2.setCustomValidity("Passwords Don't Match");
+    confirm.classList.remove("valid");
+    confirm.classList.add("invalid");
+  } else {
+    confirm.classList.remove("invalid");
+    confirm.classList.add("valid");
+    myInput2.setCustomValidity('');
+  }
+
+}
+myInput2.onkeyup = function() {
+  if(myInput2.value != myInput.value) {
+    myInput2.setCustomValidity("Passwords Don't Match");
+    confirm.classList.remove("valid");
+    confirm.classList.add("invalid");
+  } else {
+    confirm.classList.remove("invalid");
+    confirm.classList.add("valid");
+    myInput2.setCustomValidity('');
+  }
+}
+  </script>
+  <script>
+var field = document.querySelector(".nospaces");
+field.addEventListener('keypress', function ( event ) {  
+   var key = event.keyCode;
+    if (key === 32) {
+      event.preventDefault();
+    }
+});
+
+var field1 = document.querySelector(".nospaces1");
+field1.addEventListener('keypress', function ( event ) {  
+   var key = event.keyCode;
+    if (key === 32) {
+     event.preventDefault();
+    }
+});
+
+var field2 = document.querySelector(".nospaces2");
+field2.addEventListener('keypress', function ( event ) {  
+   var key = event.keyCode;
+    if (key === 32) {
+      event.preventDefault();
+    }
+});
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LeJ5dQiAAAAAF335hN1UZjZBFYE2CSsAgVCBbAu"></script>
+<script>
+    grecaptcha.ready(function() {
+
+        grecaptcha.execute('6LeJ5dQiAAAAAF335hN1UZjZBFYE2CSsAgVCBbAu', {action:'validate_captcha'})
+                  .then(function(token) {
+            document.getElementById('g-recaptcha-response').value = token;
+        });
+    });
+</script>
+<script language="javascript" type="text/javascript">
+function removeSpaces(string) {
+ return string.split(' ').join('');
+}
+</script>
+</html>

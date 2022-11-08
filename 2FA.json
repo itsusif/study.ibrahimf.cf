@@ -1,0 +1,41 @@
+{
+  "auth": [
+    {
+      "admin": 808741
+    }
+  ],
+  "token": [
+    {
+      "admin": "4f47d700-5d6d-11ed-8a5c-c998ff064b1d"
+    }
+  ],
+  "ip": [
+    {
+      "admin": "102.47.147.109"
+    },
+    {
+      "admin": "156.194.246.233"
+    },
+    {
+      "admin": "156.194.246.233"
+    },
+    {
+      "admin": "156.194.246.233"
+    }
+  ],
+  "email": [
+    {
+      "admin": "admin@admin"
+    }
+  ],
+  "password": [
+    {
+      "admin": "Admin0Admin"
+    }
+  ],
+  "veremail": [
+    {
+      "admin": "admin@admin"
+    }
+  ]
+}

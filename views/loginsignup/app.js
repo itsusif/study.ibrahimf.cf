@@ -1,0 +1,15 @@
+var myInput=document.getElementById("psw");var myInput2=document.getElementById("psw2");var letter=document.getElementById("letter");var capital=document.getElementById("capital");var number=document.getElementById("number");var length=document.getElementById("length");var confirm=document.getElementById("confirm");var conmes=document.getElementById("conmes");myInput.onfocus=function(){document.getElementById("message").style.display="block";}
+myInput2.onfocus=function(){document.getElementById("conmes").style.display="block";}
+myInput.onblur=function(){document.getElementById("message").style.display="none";}
+myInput2.onblur=function(){document.getElementById("conmes").style.display="none";}
+myInput.onkeyup=function(){var lowerCaseLetters=/[a-z]/g;if(myInput.value.match(lowerCaseLetters)){letter.classList.remove("invalid");letter.classList.add("valid");}else{letter.classList.remove("valid");letter.classList.add("invalid");}
+var upperCaseLetters=/[A-Z]/g;if(myInput.value.match(upperCaseLetters)){capital.classList.remove("invalid");capital.classList.add("valid");}else{capital.classList.remove("valid");capital.classList.add("invalid");}
+var numbers=/[0-9]/g;if(myInput.value.match(numbers)){number.classList.remove("invalid");number.classList.add("valid");}else{number.classList.remove("valid");number.classList.add("invalid");}
+if(myInput.value.length>=8){length.classList.remove("invalid");length.classList.add("valid");}else{length.classList.remove("valid");length.classList.add("invalid");}
+if(myInput2.value!=myInput.value){myInput2.setCustomValidity("Passwords Don't Match");confirm.classList.remove("valid");confirm.classList.add("invalid");}else{confirm.classList.remove("invalid");confirm.classList.add("valid");myInput2.setCustomValidity('');}}
+myInput2.onkeyup=function(){if(myInput2.value!=myInput.value){myInput2.setCustomValidity("Passwords Don't Match");confirm.classList.remove("valid");confirm.classList.add("invalid");}else{confirm.classList.remove("invalid");confirm.classList.add("valid");myInput2.setCustomValidity('');}}
+var field=document.querySelector(".nospaces");field.addEventListener('keypress',function(event){var key=event.keyCode;if(key===32){event.preventDefault();}});var field1=document.querySelector(".nospaces1");field1.addEventListener('keypress',function(event){var key=event.keyCode;if(key===32){event.preventDefault();}});var field2=document.querySelector(".nospaces2");field2.addEventListener('keypress',function(event){var key=event.keyCode;if(key===32){event.preventDefault();}});function myFunction(){var x=document.getElementById("psw");var xx=document.getElementById("psw2");if(x.type==="password"){x.type="text";}else{x.type="password";}
+if(xx.type==="password"){xx.type="text";}else{xx.type="password";}}
+var close=document.getElementsByClassName("closebtn");var i;for(i=0;i<close.length;i++){close[i].onclick=function(){var div=this.parentElement;div.style.opacity="0";setTimeout(function(){div.style.display="none";},600);}}
+const fadeOut=()=>{const loading=document.querySelector(".loading");loading.classList.add("fade");}
+window.addEventListener("load",fadeOut);
